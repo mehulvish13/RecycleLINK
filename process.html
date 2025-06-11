@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecycLink - Our Process | E-Waste Recycling</title>
+    <style>
+        /* Root variables from second file */
+        :root {
+            --primary-color: #2E8B57;
+            --secondary-color: #32CD32;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --dark: #222;
+            --gray: #666;
+            --light-gray: #ccc;
+        }
+
+        /* ...existing base styles from second file... */
+
+        /* Enhanced responsive styles */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+            
+            /* ...existing responsive styles... */
+            
+            .waste-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        /* Additional mobile optimizations */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 15px;
+            }
+            .hero-content h1 {
+                font-size: 28px;
+            }
+            .btn-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation from home.html -->
+    <nav class="navbar">
+        // ...existing navigation code...
+    </nav>
+
+    <!-- Hero section with process focus -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Our Recycling Process</h1>
+            <p>Discover how we transform e-waste into valuable resources through our comprehensive recycling program.</p>
+            <div class="btn-group">
+                <a href="#process-steps" class="btn btn-primary">View Process</a>
+                <a href="home.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process content from second file -->
+    <section class="section" id="process-steps">
+        // ...existing process steps content...
+    </section>
+
+    <!-- Footer from home.html -->
+    <footer>
+        // ...existing footer code...
+    </footer>
+
+    <!-- Enhanced script for animations -->
+    <script>
+        // Scroll animations for stats
+        window.addEventListener('scroll', function() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const position = stat.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (position < screenPosition && !stat.classList.contains('animated')) {
+                    stat.classList.add('animated');
+                    animateValue(stat, 0, parseInt(stat.textContent), 2000);
+                }
+            });
+        });
+
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+    </script>
+</body>
+</html>
