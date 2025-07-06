@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecycLink - Turning E-Waste Into Value</title>
     <style>
         :root {
-            --primary-color: #3498db; /* Example Blue */
-            --secondary-color: #2ecc71; /* Example Green */
+            --primary-color: #3498db;
+            /* Example Blue */
+            --secondary-color: #2ecc71;
+            /* Example Green */
             --light-bg: #f8f8f8;
             --text-color: #333;
-            --header-font: 'Arial', sans-serif; /* Placeholder */
-            --body-font: 'Helvetica', sans-serif; /* Placeholder */
+            --header-font: 'Arial', sans-serif;
+            /* Placeholder */
+            --body-font: 'Helvetica', sans-serif;
+            /* Placeholder */
         }
+
         body {
             font-family: var(--body-font);
             margin: 0;
@@ -20,20 +26,29 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--header-font);
             color: var(--primary-color);
             margin-top: 0;
         }
+
         a {
             text-decoration: none;
             color: var(--primary-color);
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .btn {
             display: inline-block;
             padding: 10px 25px;
@@ -42,30 +57,36 @@
             text-align: center;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         .btn-primary {
             background-color: var(--primary-color);
             color: white;
         }
+
         .btn-secondary {
             background-color: var(--secondary-color);
             color: white;
         }
+
         .btn-light {
             background-color: white;
             color: var(--primary-color);
             border: 1px solid white;
         }
+
         .btn-outline {
             background-color: transparent;
             color: white;
             border: 1px solid white;
         }
+
         .btn-cta {
             background-color: white;
             color: var(--primary-color);
             padding: 12px 30px;
             font-size: 18px;
         }
+
         /* Specific CSS provided by you follows */
         .navbar {
             background-color: white;
@@ -75,11 +96,13 @@
             top: 0;
             z-index: 1000;
         }
+
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-size: 28px;
             font-weight: bold;
@@ -87,6 +110,7 @@
             display: flex;
             align-items: center;
         }
+
         .logo-icon {
             width: 30px;
             height: 30px;
@@ -94,6 +118,7 @@
             border-radius: 50%;
             margin-right: 10px;
         }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -101,14 +126,18 @@
             margin: 0;
             padding: 0;
         }
+
         .nav-links a {
             color: var(--text-color);
             font-weight: 500;
             position: relative;
         }
-        .nav-links a:hover, .nav-links a.active {
+
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--primary-color);
         }
+
         .nav-links a.active:after {
             content: '';
             position: absolute;
@@ -118,79 +147,96 @@
             height: 2px;
             background-color: var(--primary-color);
         }
+
         .auth-buttons {
             display: flex;
             gap: 15px;
         }
+
         .hero {
             background-color: var(--primary-color);
             color: white;
             padding: 100px 0;
             text-align: center;
         }
+
         .hero-content h1 {
             font-size: 48px;
             margin-bottom: 20px;
             color: white;
         }
+
         .hero-content p {
             font-size: 20px;
             max-width: 700px;
             margin: 0 auto 40px;
         }
+
         .btn-group {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
+
         .section {
             padding: 80px 0;
         }
+
         .section-heading {
             text-align: center;
             margin-bottom: 60px;
         }
+
         .section-heading h2 {
             font-size: 36px;
             margin-bottom: 15px;
         }
+
         .section-heading p {
             font-size: 18px;
             max-width: 800px;
             margin: 0 auto;
         }
+
         .process-intro {
             text-align: center;
             margin-bottom: 60px;
         }
+
         .process-flow {
             display: flex;
             flex-direction: column;
             gap: 60px;
             margin: 50px 0;
         }
+
         .process-step {
             display: flex;
             align-items: center;
             gap: 40px;
         }
+
         .process-step:nth-child(even) {
             flex-direction: row-reverse;
         }
+
         .step-image {
             flex: 1;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
+
         .step-image img {
             width: 100%;
             height: auto;
             display: block;
         }
+
         .step-content {
             flex: 1;
         }
+
         .step-number {
             display: inline-block;
             width: 40px;
@@ -203,19 +249,23 @@
             margin-bottom: 15px;
             font-weight: bold;
         }
+
         .step-content h3 {
             font-size: 24px;
             margin-bottom: 15px;
             color: var(--primary-color);
         }
+
         .step-content p {
             margin-bottom: 20px;
         }
+
         .features {
             display: flex;
             gap: 15px;
             margin-bottom: 20px;
         }
+
         .feature {
             background-color: var(--light-bg);
             padding: 10px 15px;
@@ -225,48 +275,58 @@
             align-items: center;
             gap: 5px;
         }
+
         .waste-types {
             margin-top: 80px;
         }
+
         .waste-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
+
         .waste-card {
             background-color: var(--light-bg);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .waste-card img {
             width: 100%;
             height: 180px;
             object-fit: cover;
         }
+
         .waste-content {
             padding: 20px;
         }
+
         .waste-content h3 {
             font-size: 20px;
             margin-bottom: 10px;
             color: var(--primary-color);
         }
+
         .process-chart {
             margin: 60px auto;
             max-width: 900px;
         }
+
         .process-chart img {
             width: 100%;
             height: auto;
         }
+
         .flowchart {
             display: flex;
             justify-content: space-between;
             margin: 60px 0;
             position: relative;
         }
+
         .flowchart:before {
             content: '';
             position: absolute;
@@ -277,6 +337,7 @@
             background-color: var(--secondary-color);
             z-index: 0;
         }
+
         .flow-step {
             display: flex;
             flex-direction: column;
@@ -285,6 +346,7 @@
             position: relative;
             z-index: 1;
         }
+
         .flow-icon {
             width: 80px;
             height: 80px;
@@ -297,101 +359,123 @@
             font-size: 30px;
             margin-bottom: 15px;
         }
+
         .flow-title {
             text-align: center;
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         .flow-desc {
             text-align: center;
             font-size: 14px;
         }
+
         .impact-section {
             background-color: var(--light-bg);
             padding: 80px 0;
             text-align: center;
         }
+
         .stats {
             display: flex;
             justify-content: space-around;
             margin-top: 50px;
         }
+
         .stat {
             text-align: center;
         }
+
         .stat-number {
             font-size: 48px;
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 10px;
         }
+
         .stat-label {
             font-size: 18px;
         }
+
         .cta-section {
             background-color: var(--primary-color);
             color: white;
             padding: 80px 0;
             text-align: center;
         }
+
         .cta-section h2 {
             font-size: 36px;
             margin-bottom: 20px;
         }
+
         .cta-section p {
             font-size: 18px;
             max-width: 600px;
             margin: 0 auto 30px;
         }
+
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
+
         footer {
             background-color: #222;
             color: #ccc;
             padding: 50px 0 20px;
         }
+
         .footer-col h3 {
             color: white;
             margin-bottom: 20px;
             font-size: 20px;
         }
+
         .footer-links {
             list-style: none;
             padding: 0;
         }
+
         .footer-links li {
             margin-bottom: 10px;
         }
+
         .footer-links a {
             color: #ccc;
             text-decoration: none;
         }
+
         .footer-links a:hover {
             color: var(--secondary-color);
         }
+
         .copyright {
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid #444;
         }
+
         /* Responsive adjustments */
         @media (max-width: 900px) {
             .process-step {
                 flex-direction: column;
                 gap: 20px;
             }
+
             .process-step:nth-child(even) {
                 flex-direction: column;
             }
+
             .flowchart {
                 flex-direction: column;
                 gap: 30px;
                 align-items: center;
             }
+
             .flowchart:before {
                 height: 80%;
                 width: 4px;
@@ -400,6 +484,7 @@
                 right: auto;
                 transform: translateX(-50%);
             }
+
             .stats {
                 flex-direction: column;
                 gap: 30px;
@@ -407,6 +492,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container nav-container">
@@ -434,7 +520,8 @@
     <section class="hero">
         <div class="container hero-content">
             <h1>Turning E-Waste Into Value</h1>
-            <p>Join our mission to reduce electronic waste by giving devices a second life. We collect, test, repair, and resell electronics to create a more sustainable future.</p>
+            <p>Join our mission to reduce electronic waste by giving devices a second life. We collect, test, repair,
+                and resell electronics to create a more sustainable future.</p>
             <div class="btn-group">
                 <a href="#" class="btn btn-primary">Sell Your E-Waste</a>
                 <a href="#" class="btn btn-secondary">Shop Refurbished</a>
@@ -446,11 +533,13 @@
         <div class="container">
             <div class="section-heading">
                 <h2>Our Mission</h2>
-                <p>At RecycLink, we're dedicated to tackling the growing problem of electronic waste through sustainable recycling and repurposing practices.</p>
+                <p>At RecycLink, we're dedicated to tackling the growing problem of electronic waste through sustainable
+                    recycling and repurposing practices.</p>
             </div>
             <div class="process-intro">
                 <h2>How Our Process Works</h2>
-                <p>Explore our 6-step journey—from waste to worth—through our comprehensive recycling process that handles all types of electronic waste responsibly.</p>
+                <p>Explore our 6-step journey—from waste to worth—through our comprehensive recycling process that
+                    handles all types of electronic waste responsibly.</p>
             </div>
 
             <div class="flowchart">
@@ -494,12 +583,16 @@
                     <div class="step-content">
                         <div class="step-number">1</div>
                         <h3>Manual Dismantling</h3>
-                        <p>Our skilled technicians carefully dismantle all types of electronic devices into their component parts. This includes separating circuit boards, plastics, metals, glass, and batteries.</p>
+                        <p>Our skilled technicians carefully dismantle all types of electronic devices into their
+                            component parts. This includes separating circuit boards, plastics, metals, glass, and
+                            batteries.</p>
                         <div class="features">
                             <div class="feature"> Specialized tools</div>
                             <div class="feature"> Skilled technicians</div>
                         </div>
-                        <p><strong>Safety Note:</strong> Batteries are stored in fireproof containers. CRT monitors and TVs are handled only by certified professionals to prevent exposure to harmful materials.</p>
+                        <p><strong>Safety Note:</strong> Batteries are stored in fireproof containers. CRT monitors and
+                            TVs are handled only by certified professionals to prevent exposure to harmful materials.
+                        </p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -509,12 +602,15 @@
                     <div class="step-content">
                         <div class="step-number">2</div>
                         <h3>Component Testing & Reuse</h3>
-                        <p>Each salvageable component undergoes rigorous testing to determine functionality. Working parts like RAM, processors, hard drives, and display panels are cleaned, certified, and prepared for reuse.</p>
+                        <p>Each salvageable component undergoes rigorous testing to determine functionality. Working
+                            parts like RAM, processors, hard drives, and display panels are cleaned, certified, and
+                            prepared for reuse.</p>
                         <div class="features">
                             <div class="feature"> ISO 9001 Certified</div>
                             <div class="feature"> Electrical safety tests</div>
                         </div>
-                        <p>All data storage devices are securely wiped using DoD-compliant methods to protect previous owners' privacy before testing and resale.</p>
+                        <p>All data storage devices are securely wiped using DoD-compliant methods to protect previous
+                            owners' privacy before testing and resale.</p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -524,14 +620,16 @@
                     <div class="step-content">
                         <div class="step-number">3</div>
                         <h3>Material Recovery</h3>
-                        <p>Non-functional components enter our material recovery process, where valuable resources are extracted through mechanical and chemical processes:</p>
+                        <p>Non-functional components enter our material recovery process, where valuable resources are
+                            extracted through mechanical and chemical processes:</p>
                         <ul style="margin-left: 20px; margin-bottom: 15px;">
                             <li>Circuit boards: Gold, silver, palladium, and copper recovery</li>
                             <li>Wires: Copper extraction after insulation removal</li>
                             <li>Plastics: Granulation and sorting by polymer type</li>
                             <li>Batteries: Safe extraction of lithium, cobalt, and nickel</li>
                         </ul>
-                        <p><strong>Note:</strong> Chemical processing is only performed by our certified environmental partners to ensure proper handling of hazardous materials.</p>
+                        <p><strong>Note:</strong> Chemical processing is only performed by our certified environmental
+                            partners to ensure proper handling of hazardous materials.</p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -541,12 +639,15 @@
                     <div class="step-content">
                         <div class="step-number">4</div>
                         <h3>Remanufacturing</h3>
-                        <p>Devices with sufficient working components are remanufactured into fully functional products. Our technicians rebuild laptops, desktops, smartphones, and tablets using a combination of salvaged and new parts.</p>
+                        <p>Devices with sufficient working components are remanufactured into fully functional products.
+                            Our technicians rebuild laptops, desktops, smartphones, and tablets using a combination of
+                            salvaged and new parts.</p>
                         <div class="features">
                             <div class="feature"> Quality control</div>
                             <div class="feature"> 90-day warranty</div>
                         </div>
-                        <p>Each refurbished device undergoes comprehensive testing and receives a condition grade (A, B, or C) before being offered for sale at affordable prices.</p>
+                        <p>Each refurbished device undergoes comprehensive testing and receives a condition grade (A, B,
+                            or C) before being offered for sale at affordable prices.</p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -556,14 +657,16 @@
                     <div class="step-content">
                         <div class="step-number">5</div>
                         <h3>Safe Disposal</h3>
-                        <p>Materials that cannot be reused or recycled are disposed of according to strict environmental guidelines. This includes:</p>
+                        <p>Materials that cannot be reused or recycled are disposed of according to strict environmental
+                            guidelines. This includes:</p>
                         <ul style="margin-left: 20px; margin-bottom: 15px;">
                             <li>Mercury-containing components from LCD screens</li>
                             <li>Lead from CRT glass</li>
                             <li>Flame retardants from certain plastics</li>
                             <li>Damaged batteries and capacitors</li>
                         </ul>
-                        <p>Our facility is E-Waste Rules 2016 Compliant and adheres to all local and international regulations for electronic waste management.</p>
+                        <p>Our facility is E-Waste Rules 2016 Compliant and adheres to all local and international
+                            regulations for electronic waste management.</p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -573,12 +676,14 @@
                     <div class="step-content">
                         <div class="step-number">6</div>
                         <h3>Sales & Impact</h3>
-                        <p>Our refurbished electronics and recovered materials return to the market, creating a circular economy that reduces demand for new production:</p>
+                        <p>Our refurbished electronics and recovered materials return to the market, creating a circular
+                            economy that reduces demand for new production:</p>
                         <div class="features">
                             <div class="feature"> Circular economy</div>
                             <div class="feature"> Affordable technology</div>
                         </div>
-                        <p>We partner with local schools, non-profits, and small businesses to provide affordable technology solutions while tracking and sharing our environmental impact metrics.</p>
+                        <p>We partner with local schools, non-profits, and small businesses to provide affordable
+                            technology solutions while tracking and sharing our environmental impact metrics.</p>
                     </div>
                 </div>
             </div>
@@ -593,42 +698,48 @@
                         <img src="/api/placeholder/300/200" alt="Computers & Laptops">
                         <div class="waste-content">
                             <h3>Computers & Laptops</h3>
-                            <p>Motherboards, CPUs, RAM, GPUs, power supplies, and casings are dismantled for component recovery and metals extraction.</p>
+                            <p>Motherboards, CPUs, RAM, GPUs, power supplies, and casings are dismantled for component
+                                recovery and metals extraction.</p>
                         </div>
                     </div>
                     <div class="waste-card">
                         <img src="/api/placeholder/300/200" alt="Mobile Devices">
                         <div class="waste-content">
                             <h3>Mobile Devices</h3>
-                            <p>Smartphones and tablets are processed for precious metals, rare earth elements, and battery materials after secure data wiping.</p>
+                            <p>Smartphones and tablets are processed for precious metals, rare earth elements, and
+                                battery materials after secure data wiping.</p>
                         </div>
                     </div>
                     <div class="waste-card">
                         <img src="/api/placeholder/300/200" alt="Circuit Boards">
                         <div class="waste-content">
                             <h3>Circuit Boards</h3>
-                            <p>PCBs contain high concentrations of valuable metals including gold, silver, and palladium that are recovered through specialized processing.</p>
+                            <p>PCBs contain high concentrations of valuable metals including gold, silver, and palladium
+                                that are recovered through specialized processing.</p>
                         </div>
                     </div>
                     <div class="waste-card">
                         <img src="/api/placeholder/300/200" alt="Wires & Cables">
                         <div class="waste-content">
                             <h3>Wires & Cables</h3>
-                            <p>Insulation is removed and copper is recovered through mechanical stripping and granulation processes.</p>
+                            <p>Insulation is removed and copper is recovered through mechanical stripping and
+                                granulation processes.</p>
                         </div>
                     </div>
                     <div class="waste-card">
                         <img src="/api/placeholder/300/200" alt="Displays & Monitors">
                         <div class="waste-content">
                             <h3>Displays & Monitors</h3>
-                            <p>LED, LCD, and CRT displays require specialized handling to safely manage mercury, lead, and other hazardous materials.</p>
+                            <p>LED, LCD, and CRT displays require specialized handling to safely manage mercury, lead,
+                                and other hazardous materials.</p>
                         </div>
                     </div>
                     <div class="waste-card">
                         <img src="/api/placeholder/300/200" alt="Batteries">
                         <div class="waste-content">
                             <h3>Batteries</h3>
-                            <p>Lithium-ion, nickel-cadmium, and lead-acid batteries undergo safe dismantling for metal recovery and hazardous material containment.</p>
+                            <p>Lithium-ion, nickel-cadmium, and lead-acid batteries undergo safe dismantling for metal
+                                recovery and hazardous material containment.</p>
                         </div>
                     </div>
                 </div>
@@ -640,7 +751,8 @@
         <div class="container">
             <div class="section-heading">
                 <h2>Our Environmental Impact</h2>
-                <p>By giving electronics a second life, we reduce the need for new production and keep hazardous materials out of landfills, protecting our environment for future generations.</p>
+                <p>By giving electronics a second life, we reduce the need for new production and keep hazardous
+                    materials out of landfills, protecting our environment for future generations.</p>
             </div>
             <div class="stats">
                 <div class="stat">
@@ -663,7 +775,8 @@
         <div class="container">
             <div class="section-heading">
                 <h2>Economic Benefits</h2>
-                <p>Our process creates affordable access to technology while also providing payment for your unused electronics, creating value in what might otherwise be discarded.</p>
+                <p>Our process creates affordable access to technology while also providing payment for your unused
+                    electronics, creating value in what might otherwise be discarded.</p>
             </div>
             <div class="process-step">
                 <div class="step-image">
@@ -678,7 +791,8 @@
                         <li>Contribute to reduced production costs through resource recovery</li>
                         <li>Help make technology accessible to underserved communities</li>
                     </ul>
-                    <p>Our transparent pricing model ensures you get the best value for your electronic waste while contributing to environmental sustainability.</p>
+                    <p>Our transparent pricing model ensures you get the best value for your electronic waste while
+                        contributing to environmental sustainability.</p>
                 </div>
             </div>
         </div>
@@ -688,7 +802,8 @@
         <div class="container">
             <div class="section-heading">
                 <h2>Innovation</h2>
-                <p>Through creative repurposing, we transform outdated electronics into useful new products, maximizing the potential of circular economy principles.</p>
+                <p>Through creative repurposing, we transform outdated electronics into useful new products, maximizing
+                    the potential of circular economy principles.</p>
             </div>
             <div class="process-step">
                 <div class="step-content">
@@ -700,7 +815,8 @@
                         <li>Creating educational kits from recovered parts for STEM education</li>
                         <li>Developing energy storage solutions from recovered battery materials</li>
                     </ul>
-                    <p>We collaborate with designers, engineers, and educators to find creative new uses for technology that would otherwise be discarded.</p>
+                    <p>We collaborate with designers, engineers, and educators to find creative new uses for technology
+                        that would otherwise be discarded.</p>
                 </div>
                 <div class="step-image">
                     <img src="/api/placeholder/600/400" alt="Innovation in Recycling">
@@ -712,7 +828,8 @@
     <section class="cta-section">
         <div class="container">
             <h2>Join Our Recycling Revolution</h2>
-            <p>Whether you're looking to responsibly dispose of old electronics or purchase affordable refurbished devices, RecycLink is your sustainable technology partner.</p>
+            <p>Whether you're looking to responsibly dispose of old electronics or purchase affordable refurbished
+                devices, RecycLink is your sustainable technology partner.</p>
             <a href="#" class="btn btn-cta">Get Started Today</a>
         </div>
     </section>
@@ -762,19 +879,20 @@
                         <li><strong>MEHUL VISHWAKARMA</strong></li>
                         <li><a href="mailto:mehulvinodv@gmail.com" class="dev-link">Email</a></li>
                         <li><a href="https://github.com/mehulvish13" target="_blank" class="dev-link">GitHub</a></li>
-                        <li><a href="https://linkedin.com/in/mehul-vishwakarma13" target="_blank" class="dev-link">LinkedIn</a></li>
+                        <li><a href="https://linkedin.com/in/mehul-vishwakarma13" target="_blank"
+                                class="dev-link">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 RecycLink. All rights reserved.                 <i>MADE BY MV</i>
+                &copy; 2025 RecycLink. All rights reserved. <i>MADE BY MV</i>
             </div>
         </div>
     </footer>
 
     <script>
         // Simple animation for stats counters
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const stats = document.querySelectorAll('.stat-number');
             stats.forEach(stat => {
                 const position = stat.getBoundingClientRect().top;
@@ -785,4 +903,5 @@
         });
     </script>
 </body>
+
 </html>
