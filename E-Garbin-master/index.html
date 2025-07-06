@@ -1,0 +1,430 @@
+<html>
+    <head>
+      <title>E GARBIN</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap">
+      <link rel="stylesheet" href="template.css">
+      <style>
+        * {  
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;	
+}
+body {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  font-size:16px;
+  font-family:"Open Sans",Arial;
+  color: #f5f5f5;
+}
+
+        .line::after, nav::after, .center::after, .box::after, .margin::after, .margin2x::after, .grid.full::after {
+  clear:both;
+  content: ".";    /* form block thickness and nav bar display*/
+  display:block;
+  height:0;
+  line-height:0;
+  overflow:hidden;
+  visibility:hidden;
+}
+
+        
+        a{text-decoration:none;}
+        .top-nav li {
+  float:left;
+}
+.top-nav li a {
+  color: #fff;
+  display:block;
+ }
+
+a:hover {color:red;}    
+p,li,dl,blockquote,table,kbd {
+  font-size: 14px;                    /*navbar paragraph size*/
+  line-height: 2;
+            }
+        
+#first-block {
+	background: rgba(0,0,0,0.7);
+	padding: 3em 2em;
+	text-align: center; }
+#first-block h1 {
+	color: #ff9800;
+	font-size: 2.5em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	margin-top: 1em;
+}
+#first-block p {
+	color: #f5f5f5;
+	font-size: 1.2em;
+    }
+         
+    .size-960 .line,.size-1140 .line,.size-1280 .line,.size-1520 .line {
+  margin:0 auto;
+  padding:0 0.625rem;/*ewaste problem alignment*/
+}
+        #hello{  padding-top: 100px;          height: 150px;
+        font-size:2em;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: #ff9800;
+        letter-spacing: 1px;
+        }    
+        
+form.customform input:hover, form.customform textarea:hover, form.customform select:hover, form.customform input:focus, form.customform textarea:focus, form.customform select:focus {background: none repeat scroll 0 0 #fff;}
+form.customform input, form.customform textarea, form.customform select {
+ background: #232526;
+ color: #fff;
+ border: 1px solid #ff9800;
+ border-radius: 8px;
+ padding: 0.7em;
+ width: 100%;
+}
+   button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background: #232526;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #ff9800;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+        input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+      </style>
+    </head>
+    <body class="size-1140">
+  	 
+  	 
+      <!-- TOP NAV WITH LOGO -->
+      <header>
+        
+         <nav>
+            <div class="line">
+               <div class="s-12 l-2">
+                  <p class="logo"><strong>E garbin</strong></p>
+                </div>
+                <strong>
+               <p class="nav-text"></p><div class="top-nav s-12 l-10">
+                  
+                  <ul class="right">
+                     <li><a href="#first-block">WHAT IS E-WASTE</a></li>
+                     <li><a href="#features">E WASTE PROBLEM</a></li>
+                     <li><a href="#about-us">E WASTE REGULATION IN INDIA</a></li>
+                <li><a href="#services">DONATE</a></li>
+                     <li><a href="#contact">CONTACT</a></li>
+                      <li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</a></li>
+                    
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="ulogin.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="us" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pa" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+                  </ul>
+               </div>
+            </strong></div></nav></header>  
+      <section>
+
+       
+              
+    
+         
+         <!-- FIRST BLOCK -->
+          <div id="hello"> AIM: TO PROMOTE AWARENESS REGARDING EWASTE ,AND
+              TO COLLECT EWASTE ON CALL BASIS </div>
+         <div id="first-block">
+             <img src="preview.jpg" style="width: 1000px">
+            <div class="line">
+               <h1>WHAT IS E-WASTE</h1>
+               <p>In this modern age of science and technology, we enjoy new gadgets and appliances, which has become a necessity for every person. The electronic items have short lifetime and are thrown away. Thus, we have a problem which is popularly known as e-waste.
+E-waste has been defined as waste electrical and electronic equipment, whole or in part or rejects from their manufacturing and repair process, which are intended to be discarded. 
+E-waste is any electronic product or accessories which is not useable and non-repairable at its end of life for example old defective and irreparable products like refrigerator, TV, mobiles, chargers, ear-phone, batteries, lights etc.
+E-waste generally consists of those substances contained in an electronic product which can bring adverse effects to the atmosphere and hence managing it in a proper way is important. Apart from affecting the environment it can also affect the health of the people.
+</p>
+               <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
+            </div>
+         </div>
+         <!-- FEATURES -->
+         <div id="features">
+            <div class="line">
+               <div class="margin">
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-vector"></i> <!--green dot-->
+                     <h2>E- WASTE PROBLEM</h2>
+                     <p>There are negative consequences of disposal of E- WASTE if not done in scientific way:
+<ul style="list-style-type:circle;">
+  <li>Toxic material present in e-waste get mixed with earth, air, water etc and causes health issues</li>
+  <li>Oil & Gases which is present is some of e-waste like compressor and CRT causes environment pollution.    </li>
+    <li>Batteries contains highly hazardous element.</li>
+    <li>Burning of rubber & Plastic in open area causes air pollution.</li>
+ 
+</ul>  </p>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-isight icon3x"></i>
+                     <h2>Problem By region</h2>
+                     <p>In India, the amount of e-waste generated differs by state. The three states that produce the most e-waste are as follows: Maharashtra, Tamil Nadu and Andhra Pradesh. Other states that produce significant e-waste are Uttar Pradesh, West Bengal, Delhi, Karnataka, Gujarat, Madhya Pradesh and Punjab.
+
+Additionally, e-waste is disproportionately generated in urban areas—65 Indian cities generate more than 60% of India’s total e-waste. Mumbai is the top e-waste producer followed by Delhi, Bengaluru, Chennai, and Kolkata.</p>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-star icon3x"></i>
+                     <h2>Environmental impacts</h2>
+                     <p>The processes used to recycle and dispose of e-waste in India have led to a number of detrimental environmental impacts. As a result improper recycling and disposal techniques, air, water and soil throughout much of India is now contaminated with toxic e-waste byproducts.
+                      
+                         <ul style="list-style-type:circle; text-emphasis-color: black">
+  <li>AIR</li>
+  <li>  WATER</li>
+    <li>SOIL</li>
+  
+ 
+</ul>  </p>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                     <i class="icon-eye"></i>
+                     <h2>Disposal techniques</h2>
+                     <p>The current e-waste disposal techniques in India have operated mostly in an informal manner due to the lack of enforcement laws and regulations. This has created a new area of economic gain for the country, especially among the urban and rural poor. Though it helps many make a living, those that are disposing of e-waste are usually not aware of the risks and health hazards that result from certain disposal techniques. There are two sectors that handle e-waste disposal and they can be divided into Informal or Formal Sectors.
+    <ul style="list-style-type:circle;">
+  <li>Formal sector</li>
+  <li>Informal sector</li>
+                             </p>
+                  </div>
+               </div>
+         
+         <!-- ABOUT US -->
+         <div id="about-us">
+            <div class="s-12 m-12 l-6 media-container">
+               <img  src="ewaste%20regulation.jpg" style="height: 600px;margin-top: 110px" >
+            </div>
+            <article class="s-12 m-12 l-6">
+               <h2>E WASTE<br>REGULATION IN INDIA</h2>
+               <p>The Ministry of Environment, Forests, and Climate Change (MoEFCC) is primarily responsible for regulations regarding electronic waste. Additionally, the Central Pollution Control Board (CPCB) and State Pollution Control Board (SPCB) produce implementation procedures to ensure proper management of rules set forth by the MoEFCC.
+               </p>
+                  <H1>Amendment to the E-Waste Management Rules, 2018</H1>
+			   <p>This amendment relaxes certain aspects of the strict E- Waste (Management Rules of 2016). Specifically, the amendment focusses on the e-waste collection targets by 10% during 2017-2018, 20% during 2018-2019, 30% during 2019-2020, and so on. This amendment also gives the Central Pollution Control Board power to randomly select electronic equipment on the market to test for compliance of rules. The financial cost associated with this testing shall be the responsibility of the government, whereas previously, this responsibility was of the producer.</p>
+                           </article>
+         </div>
+         
+         <!-- SERVICES -->
+       
+                <div id="services">
+            <div class="line">
+               <h2 >DONATE</h2>
+               <div class="margin">
+                  <div class="s-12 m-6 l-4 margin-bottom">
+                     
+                     <div class="service-text">
+                        <h3>
+Donate any amount of money for the cause of saving Earth from E-WASTE.
+</h3>
+                        <p>Automated response through SMS : Thanks for donating Rs …………. for the cause of saving Earth from E-WASTE. Very soon E-certificate will be sent to your mailbox. </p>
+                     </div>
+                  </div>
+                  <div class="s-12 m-6 l-4 margin-bottom">
+                     
+                     <div class="service-text">
+                        <h3>Waive off the redemption voucher.</h3>
+                        <p>Automated response through SMS : Thanks for waiving  off redemption voucher  for the cause of saving Earth from E-WASTE. Very soon E-certificate will be sent to your mailbox. </p>
+                     </div>
+                  </div>
+                  <div class="s-12 m-12 l-4 margin-bottom">
+                     
+<img src="donate.png" style=" height: 200px  ">
+                  </div>
+               </div>
+            </div>
+         </div>
+    
+         <div id="contact">
+            <div class="line">
+               <h2 class="section-title">About Us</h2>
+               <div class="margin">
+                     <h1 style="margin-top: 70px">Enquiry Form</h1>
+                    <form  action="quries.php" class="customform" method="post">
+                        <div class="s-12"><input name="name" placeholder="Your name" title="Your name" type="text"></div>
+                      <div class="s-12"><input type=number name="pno" placeholder="Your contact number" title="Your contect number" type="text"></div>
+                      <div class="s-12"><input name="email" placeholder="Your e-mail" title="Your Email" type="text">
+                        <input type="text" placeholder="Your Address" name="add"/></div>
+					  
+                        
+                        <div class="s-12 "><p></p> 
+                          
+                         <div class="s-12 "><p>Type of E-waste</p> <select name="type"><option>Television</option><br>
+    <option>CPU</option>
+    <option>Moniter</option>
+    <option>printer,scanner</option>
+    <option>Laptop</option>
+    <option>Inverter</option>
+    <option>Stabilizer</option>
+    <option>Others</option>
+            </select>
+                       <br> 
+                             
+                        </div>
+                        
+                        
+                        </div>
+                        
+                      <div class="s-12">Weight of E-waste(Approximate)<br>
+    <select name="weight">
+    <option>1kg</option>    
+    <option>2kg</option>
+    <option>3kg</option>
+    <option>4kg</option>
+    <option>5kg</option>
+    <option>10kg</option>
+    <option>10+kg</option></select> </div>
+                        
+                     <br>  <input style="background-color:darkorange; text-decoration-color: darkorange;" type=submit name=lo placeholder=Submit class=color-btn/>
+                        
+                   </form>
+                
+      <!-- FOOTER -->
+      <footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               &lt;           </div>
+            <div class="s-12 l-6">
+               
+            </div>
+         </div>
+      </footer>
+      
+       
+    </body>
+</html>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function myFunction() {
+  alert("Enquiry Submitted Successfuly!");
+}
+</script>
